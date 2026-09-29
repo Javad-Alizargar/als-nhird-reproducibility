@@ -257,7 +257,7 @@
       },
       {
         "from": "ROOT / \"JIM_ALS_Submission_Package\" / \"figures\"",
-        "to": "SITE / \"figures\""
+        "to": "SITE / \"figures\" / \"_pkg\""
       },
       {
         "from": "ROOT / \"codebase_pkg\"",

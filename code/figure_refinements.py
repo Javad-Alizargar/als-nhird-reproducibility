@@ -146,7 +146,7 @@ def fig1(sub, cfg):
         _t4 = SITE / "data" / "tables" / \
             "Supp_Table_1_System_Benchmarks.csv"
     bench = pd.read_csv(_t4)
-    pkg_figs = SITE / "figures"
+    pkg_figs = SITE / "figures" / "_pkg"
 
     fig = plt.figure(figsize=(10.5, 7.5), layout="constrained")
     axes = fig.subplot_mosaic("""AB\nCD""")
@@ -426,7 +426,7 @@ def fig2(sub, cfg, disease_label):
         else {"PC1": 0.172, "PC2": 0.04}
     case = "WD" if disease_label == "Wilson" else "ALS"
     case_lab = "Wilson's disease" if disease_label == "Wilson" else "ALS"
-    pkg_figs = SITE / "figures"
+    pkg_figs = SITE / "figures" / "_pkg"
 
     fig = plt.figure(figsize=(10.5, 7.5), layout="constrained")
     axes = fig.subplot_mosaic("""AB\nCD""")
