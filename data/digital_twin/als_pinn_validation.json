@@ -1,0 +1,13 @@
+{
+  "per_equation_residual_mean_abs": {
+    "r1_dMdt": 0.003861143020913005,
+    "r2_dFdt": 0.08717935532331467,
+    "r3_dNdt": 0.05236377194523811
+  },
+  "vs_high_accuracy_solver_max_abs_error": {
+    "M": 0.15076543075201176,
+    "F": 2.0446189299336197,
+    "N": 0.768544753285397
+  },
+  "note": "PINN evaluated at nominal parameters (E=1.0, a0=60) on the 61-point monthly grid (t = 0..60 months, step 1 month; T_GRID in scripts/phase4_als_digital_twin.py)"
+}

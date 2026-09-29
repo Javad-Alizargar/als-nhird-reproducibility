@@ -1,0 +1,279 @@
+{
+  "raw_response": "{\n  \"title\": \"A minimal biologically grounded ODE system for ALS progression linking motor neuron loss, functional decline, and EV-RNA-modulated neuroinflammation\",\n  \"state_variables\": [\n    {\n      \"symbol\": \"M\",\n      \"name\": \"surviving motor neuron fraction\",\n      \"unit\": \"dimensionless\",\n      \"range\": \"[0,1]\"\n    },\n    {\n      \"symbol\": \"F\",\n      \"name\": \"ALSFRS-R functional score\",\n      \"unit\": \"points\",\n      \"range\": \"[0,48]\"\n    },\n    {\n      \"symbol\": \"N\",\n      \"name\": \"neuroinflammation index driven by EV-RNA proxy burden\",\n      \"unit\": \"dimensionless\",\n      \"range\": \"[0,inf)\"\n    }\n  ],\n  \"parameters\": [\n    {\n      \"symbol\": \"k1\",\n      \"name\": \"baseline motor neuron degeneration rate\",\n      \"nominal\": 0.012,\n      \"range\": [0.004, 0.030],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Intrinsic rate of motor neuron loss in the absence of inflammation and transcriptomic burden; sets the slowest possible progression.\"\n    },\n    {\n      \"symbol\": \"k2\",\n      \"name\": \"neuroinflammatory amplification of motor neuron death\",\n      \"nominal\": 0.020,\n      \"range\": [0.005, 0.060],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Additional motor neuron death per unit of neuroinflammation index N; represents microglial/astrocytic toxicity.\"\n    },\n    {\n      \"symbol\": \"k3\",\n      \"name\": \"EV-RNA burden sensitivity of motor neuron death\",\n      \"nominal\": 0.015,\n      \"range\": [0.000, 0.050],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Increase in motor neuron death rate per unit of transcriptomic proxy burden E; captures loss of RNA-handling/neuroprotective function.\"\n    },\n    {\n      \"symbol\": \"k4\",\n      \"name\": \"age-of-onset acceleration coefficient\",\n      \"nominal\": 0.010,\n      \"range\": [0.000, 0.030],\n      \"unit\": \"year^-1\",\n      \"biological_meaning\": \"Fractional increase in baseline degeneration rate per year of age at onset above a reference age.\"\n    },\n    {\n      \"symbol\": \"a_ref\",\n      \"name\": \"reference age of onset\",\n      \"nominal\": 55.0,\n      \"range\": [45.0, 65.0],\n      \"unit\": \"years\",\n      \"biological_meaning\": \"Age at onset at which no additional age-driven acceleration is applied.\"\n    },\n    {\n      \"symbol\": \"k5\",\n      \"name\": \"functional decline per unit motor neuron loss\",\n      \"nominal\": 40.0,\n      \"range\": [20.0, 60.0],\n      \"unit\": \"points\",\n      \"biological_meaning\": \"Maximum ALSFRS-R points lost when motor neuron fraction falls from 1 to 0; scales M loss to functional score.\"\n    },\n    {\n      \"symbol\": \"k6\",\n      \"name\": \"functional recovery/compensation rate\",\n      \"nominal\": 0.050,\n      \"range\": [0.000, 0.150],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Rate at which remaining motor units compensate to partially restore function; slows apparent ALSFRS-R decline.\"\n    },\n    {\n      \"symbol\": \"k7\",\n      \"name\": \"neuroinflammation production rate\",\n      \"nominal\": 0.080,\n      \"range\": [0.020, 0.200],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Rate of increase of neuroinflammation index driven by ongoing motor neuron injury and EV-RNA burden.\"\n    },\n    {\n      \"symbol\": \"k8\",\n      \"name\": \"neuroinflammation clearance rate\",\n      \"nominal\": 0.100,\n      \"range\": [0.030, 0.250],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Natural resolution/clearance rate of neuroinflammatory signals.\"\n    },\n    {\n      \"symbol\": \"k9\",\n      \"name\": \"EV-RNA burden effect on neuroinflammation\",\n      \"nominal\": 0.500,\n      \"range\": [0.000, 1.500],\n      \"unit\": \"dimensionless\",\n      \"biological_meaning\": \"Multiplicative enhancement of neuroinflammation production by transcriptomic proxy burden E.\"\n    },\n    {\n      \"symbol\": \"E\",\n      \"name\": \"joint EV-RNA transcriptomic proxy burden\",\n      \"nominal\": 1.0,\n      \"range\": [0.0, 3.0],\n      \"unit\": \"dimensionless\",\n      \"biological_meaning\": \"Per-patient constant derived from downregulation of SRP72, NPY2R, and WDR36; higher E indicates greater loss of neuroprotective/RNA-handling function.\"\n    },\n    {\n      \"symbol\": \"a0\",\n      \"name\": \"age of onset\",\n      \"nominal\": 60.0,\n      \"range\": [30.0, 80.0],\n      \"unit\": \"years\",\n      \"biological_meaning\": \"Patient age at symptom onset; accelerates baseline degeneration via k4.\"\n    },\n    {\n      \"symbol\": \"F_max\",\n      \"name\": \"maximum ALSFRS-R score\",\n      \"nominal\": 48.0,\n      \"range\": [48.0, 48.0],\n      \"unit\": \"points\",\n      \"biological_meaning\": \"Upper bound of the ALSFRS-R scale.\"\n    },\n    {\n      \"symbol\": \"M_crit\",\n      \"name\": \"critical motor neuron fraction for death\",\n      \"nominal\": 0.20,\n      \"range\": [0.10, 0.35],\n      \"unit\": \"dimensionless\",\n      \"biological_meaning\": \"Threshold of surviving motor neuron fraction below which survival hazard rises steeply.\"\n    },\n    {\n      \"symbol\": \"F_crit\",\n      \"name\": \"critical ALSFRS-R score for death\",\n      \"nominal\": 10.0,\n      \"range\": [5.0, 15.0],\n      \"unit\": \"points\",\n      \"biological_meaning\": \"Functional score threshold below which mortality risk increases sharply.\"\n    },\n    {\n      \"symbol\": \"h0\",\n      \"name\": \"baseline hazard\",\n      \"nominal\": 0.002,\n      \"range\": [0.0005, 0.010],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Background mortality hazard independent of ALS progression.\"\n    },\n    {\n      \"symbol\": \"hM\",\n      \"name\": \"hazard sensitivity to motor neuron loss\",\n      \"nominal\": 0.080,\n      \"range\": [0.020, 0.200],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Increase in mortality hazard per unit decrease in M below M_crit.\"\n    },\n    {\n      \"symbol\": \"hF\",\n      \"name\": \"hazard sensitivity to functional loss\",\n      \"nominal\": 0.060,\n      \"range\": [0.010, 0.150],\n      \"unit\": \"month^-1\",\n      \"biological_meaning\": \"Increase in mortality hazard per point decrease in F below F_crit.\"\n    }\n  ],\n  \"equations\": [\n    {\n      \"latex\": \"\\\\frac{dM}{dt} = -\\\\left[k_1 \\\\left(1 + k_4 \\\\max(a_0 - a_{ref}, 0)\\\\right) + k_2 N + k_3 E\\\\right] M\",\n      \"number\": \"(Eq. ALS-1)\",\n      \"explanation\": \"Surviving motor neuron fraction M decays exponentially at a rate combining baseline degeneration (accelerated by age of onset), neuroinflammatory toxicity proportional to N, and EV-RNA burden E. The multiplicative M term ensures M remains in [0,1].\"\n    },\n    {\n      \"latex\": \"\\\\frac{dF}{dt} = -k_5 \\\\left(-\\\\frac{dM}{dt}\\\\right) + k_6 (F_{max} - F)\",\n      \"number\": \"(Eq. ALS-2)\",\n      \"explanation\": \"ALSFRS-R score F declines in proportion to the rate of motor neuron loss, scaled by k5, and partially recovers/compensates toward F_max at rate k6. This yields roughly 0.5-1.5 points/month decline in fast progressors.\"\n    },\n    {\n      \"latex\": \"\\\\frac{dN}{dt} = k_7 (1 + k_9 E) \\\\left(1 - M\\\\right) - k_8 N\",\n      \"number\": \"(Eq. ALS-3)\",\n      \"explanation\": \"Neuroinflammation index N is produced at a rate proportional to motor neuron loss (1-M) and enhanced by EV-RNA burden E, and cleared at rate k8. This creates a feedback loop where M loss drives N, which further accelerates M loss.\"\n    }\n  ],\n  \"initial_conditions\": {\n    \"M(0)\": 1.0,\n    \"F(0)\": 48.0,\n    \"N(0)\": 0.0\n  },\n  \"hazard_model\": {\n    \"latex\": \"\\\\lambda(t) = h_0 + h_M \\\\max(M_{crit} - M(t), 0) + h_F \\\\max(F_{crit} - F(t), 0)\",\n    \"explanation\": \"Mortality hazard increases when motor neuron fraction M falls below M_crit and when functional score F falls below F_crit. Survival probability S(t) = exp(-\\\\int_0^t \\\\lambda(s) ds). This links the ODE states to survival endpoints and allows fast vs slow progressor heterogeneity.\"\n  },\n  \"heterogeneity\": \"Per-patient parameters are sampled to produce fast vs slow progressors. Key varying parameters: k1 (0.004-0.030 month^-1), k2 (0.005-0.060 month^-1), k3 (0.000-0.050 month^-1), k4 (0.000-0.030 year^-1), k5 (20-60 points), k6 (0.000-0.150 month^-1), k7 (0.020-0.200 month^-1), k8 (0.030-0.250 month^-1), k9 (0.000-1.500), E (0.0-3.0), a0 (30-80 years), M_crit (0.10-0.35), F_crit (5-15 points), hM (0.020-0.200 month^-1), hF (0.010-0.150 month^-1). Fast progressors: high k1, k2, k3, k7, E, low k6, k8, high hM, hF. Slow progressors: opposite. This yields median survival from onset ranging from ~20 to ~48 months.\",\n  \"assumptions\": [\n    \"The system is deterministic and well-mixed; spatial heterogeneity in motor neuron pools is neglected.\",\n    \"Motor neuron fraction M is normalized to 1 at symptom onset, though significant loss may have occurred pre-symptomatically.\",\n    \"ALSFRS-R decline is driven primarily by motor neuron loss, with a linear compensation term.\",\n    \"Neuroinflammation N is a lumped index representing microglial/astrocytic activation and peripheral immune signals.\",\n    \"EV-RNA burden E is constant per patient over the 60-month window, derived from baseline transcriptomic proxies.\",\n    \"Age of onset a0 accelerates baseline degeneration linearly above a reference age.\",\n    \"Mortality hazard depends only on current M and F, not on their rates of change.\",\n    \"No treatment effects are modeled; the system represents natural history.\"\n  ],\n  \"literature_rationale\": [\n    \"Motor neuron degeneration in ALS is progressive and approximately exponential in early stages [CITE-NEEDED: motor neuron loss kinetics in ALS].\",\n    \"Neuroinflammation contributes to motor neuron death via activated microglia and astrocytes [CITE-NEEDED: neuroinflammation in ALS pathogenesis].\",\n    \"Plasma GLAST+ sEV RNA cargo, including SRP72, NPY2R, and WDR36, may reflect loss of RNA-handling and neuroprotective functions [CITE-NEEDED: EV-RNA biomarkers in ALS].\",\n    \"ALSFRS-R declines at approximately 0.5-1.5 points/month in fast progressors [CITE-NEEDED: ALSFRS-R progression rates].\",\n    \"Median survival from onset in ALS is 20-48 months [CITE-NEEDED: ALS natural history survival].\",\n    \"Age of onset is a known prognostic factor, with older age associated with faster progression [CITE-NEEDED: age of onset effect on ALS progression].\",\n    \"Functional compensation by remaining motor units can partially mask motor neuron loss [CITE-NEEDED: motor unit compensation in ALS].\",\n    \"Survival hazard increases sharply when motor neuron reserve or functional score falls below critical thresholds [CITE-NEEDED: thresholds for mortality in ALS].\"\n  ]\n}",
+  "model": {
+    "title": "A minimal biologically grounded ODE system for ALS progression linking motor neuron loss, functional decline, and EV-RNA-modulated neuroinflammation",
+    "state_variables": [
+      {
+        "symbol": "M",
+        "name": "surviving motor neuron fraction",
+        "unit": "dimensionless",
+        "range": "[0,1]"
+      },
+      {
+        "symbol": "F",
+        "name": "ALSFRS-R functional score",
+        "unit": "points",
+        "range": "[0,48]"
+      },
+      {
+        "symbol": "N",
+        "name": "neuroinflammation index driven by EV-RNA proxy burden",
+        "unit": "dimensionless",
+        "range": "[0,inf)"
+      }
+    ],
+    "parameters": [
+      {
+        "symbol": "k1",
+        "name": "baseline motor neuron degeneration rate",
+        "nominal": 0.012,
+        "range": [
+          0.004,
+          0.03
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Intrinsic rate of motor neuron loss in the absence of inflammation and transcriptomic burden; sets the slowest possible progression."
+      },
+      {
+        "symbol": "k2",
+        "name": "neuroinflammatory amplification of motor neuron death",
+        "nominal": 0.02,
+        "range": [
+          0.005,
+          0.06
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Additional motor neuron death per unit of neuroinflammation index N; represents microglial/astrocytic toxicity."
+      },
+      {
+        "symbol": "k3",
+        "name": "EV-RNA burden sensitivity of motor neuron death",
+        "nominal": 0.015,
+        "range": [
+          0.0,
+          0.05
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Increase in motor neuron death rate per unit of transcriptomic proxy burden E; captures loss of RNA-handling/neuroprotective function."
+      },
+      {
+        "symbol": "k4",
+        "name": "age-of-onset acceleration coefficient",
+        "nominal": 0.01,
+        "range": [
+          0.0,
+          0.03
+        ],
+        "unit": "year^-1",
+        "biological_meaning": "Fractional increase in baseline degeneration rate per year of age at onset above a reference age."
+      },
+      {
+        "symbol": "a_ref",
+        "name": "reference age of onset",
+        "nominal": 55.0,
+        "range": [
+          45.0,
+          65.0
+        ],
+        "unit": "years",
+        "biological_meaning": "Age at onset at which no additional age-driven acceleration is applied."
+      },
+      {
+        "symbol": "k5",
+        "name": "functional decline per unit motor neuron loss",
+        "nominal": 40.0,
+        "range": [
+          10.0,
+          45.0
+        ],
+        "unit": "points",
+        "biological_meaning": "Maximum ALSFRS-R points lost when motor neuron fraction falls from 1 to 0; scales M loss to functional score. Constrained to [10,45] post-audit so that F_crit is reachable and F stays non-negative."
+      },
+      {
+        "symbol": "k6",
+        "name": "functional recovery/compensation rate",
+        "nominal": 0.05,
+        "range": [
+          0.0,
+          0.15
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Rate at which remaining motor units compensate to partially restore function; slows apparent ALSFRS-R decline."
+      },
+      {
+        "symbol": "k7",
+        "name": "neuroinflammation production rate",
+        "nominal": 0.08,
+        "range": [
+          0.02,
+          0.2
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Rate of increase of neuroinflammation index driven by ongoing motor neuron injury and EV-RNA burden."
+      },
+      {
+        "symbol": "k8",
+        "name": "neuroinflammation clearance rate",
+        "nominal": 0.1,
+        "range": [
+          0.03,
+          0.25
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Natural resolution/clearance rate of neuroinflammatory signals."
+      },
+      {
+        "symbol": "k9",
+        "name": "EV-RNA burden effect on neuroinflammation",
+        "nominal": 0.5,
+        "range": [
+          0.0,
+          1.5
+        ],
+        "unit": "dimensionless",
+        "biological_meaning": "Multiplicative enhancement of neuroinflammation production by transcriptomic proxy burden E."
+      },
+      {
+        "symbol": "E",
+        "name": "joint EV-RNA transcriptomic proxy burden",
+        "nominal": 1.0,
+        "range": [
+          0.0,
+          3.0
+        ],
+        "unit": "dimensionless",
+        "biological_meaning": "Per-patient constant derived from downregulation of SRP72, NPY2R, and WDR36; higher E indicates greater loss of neuroprotective/RNA-handling function."
+      },
+      {
+        "symbol": "a0",
+        "name": "age of onset",
+        "nominal": 60.0,
+        "range": [
+          30.0,
+          80.0
+        ],
+        "unit": "years",
+        "biological_meaning": "Patient age at symptom onset; accelerates baseline degeneration via k4."
+      },
+      {
+        "symbol": "F_max",
+        "name": "maximum ALSFRS-R score",
+        "nominal": 48.0,
+        "range": [
+          48.0,
+          48.0
+        ],
+        "unit": "points",
+        "biological_meaning": "Upper bound of the ALSFRS-R scale."
+      },
+      {
+        "symbol": "M_crit",
+        "name": "critical motor neuron fraction for death",
+        "nominal": 0.2,
+        "range": [
+          0.1,
+          0.35
+        ],
+        "unit": "dimensionless",
+        "biological_meaning": "Threshold of surviving motor neuron fraction below which survival hazard rises steeply."
+      },
+      {
+        "symbol": "F_crit",
+        "name": "critical ALSFRS-R score for death",
+        "nominal": 10.0,
+        "range": [
+          5.0,
+          15.0
+        ],
+        "unit": "points",
+        "biological_meaning": "Functional score threshold below which mortality risk increases sharply."
+      },
+      {
+        "symbol": "h0",
+        "name": "baseline hazard",
+        "nominal": 0.002,
+        "range": [
+          0.0005,
+          0.01
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Background mortality hazard independent of ALS progression."
+      },
+      {
+        "symbol": "hM",
+        "name": "hazard sensitivity to motor neuron loss",
+        "nominal": 0.08,
+        "range": [
+          0.02,
+          0.2
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Increase in mortality hazard per unit decrease in M below M_crit."
+      },
+      {
+        "symbol": "hF",
+        "name": "hazard sensitivity to functional loss",
+        "nominal": 0.06,
+        "range": [
+          0.01,
+          0.15
+        ],
+        "unit": "month^-1",
+        "biological_meaning": "Increase in mortality hazard per unit of normalized functional deficit below F_crit (month^-1; audit revision)."
+      }
+    ],
+    "equations": [
+      {
+        "latex": "\\frac{dM}{dt} = -\\left[k_1(1 + k_4\\max(a_0 - a_{ref}, 0)) + k_2 N + k_3 E\\right] M",
+        "number": "(Eq. ALS-1)",
+        "explanation": "Surviving motor neuron fraction M decays exponentially at a rate combining baseline degeneration (accelerated by age of onset), neuroinflammatory toxicity proportional to N, and EV-RNA burden E. The multiplicative M term ensures M remains in [0,1]."
+      },
+      {
+        "latex": "\\frac{dF}{dt} = -k_5\\left(-\\frac{dM}{dt}\\right) + k_6 (F_{max} - F) M",
+        "number": "(Eq. ALS-2)",
+        "explanation": "ALSFRS-R score F declines in proportion to the rate of motor neuron loss, scaled by k5, and partially recovers/compensates toward F_max at rate k6. This yields roughly 0.5-1.5 points/month decline in fast progressors. Compensation gated by surviving motor neuron fraction (audit revision)."
+      },
+      {
+        "latex": "\\frac{dN}{dt} = k_7 (1 + k_9 E) \\left(1 - M\\right) - k_8 N",
+        "number": "(Eq. ALS-3)",
+        "explanation": "Neuroinflammation index N is produced at a rate proportional to motor neuron loss (1-M) and enhanced by EV-RNA burden E, and cleared at rate k8. This creates a feedback loop where M loss drives N, which further accelerates M loss."
+      }
+    ],
+    "initial_conditions": {
+      "M(0)": 1.0,
+      "F(0)": 48.0,
+      "N(0)": 0.0
+    },
+    "hazard_model": {
+      "latex": "\\lambda(t) = h_0 + h_M \\max(M_{crit} - M(t), 0) + h_F \\max\\left(\\frac{F_{crit} - F(t)}{F_{crit}}, 0\\right)",
+      "explanation": "Mortality hazard increases when motor neuron fraction M falls below M_crit and when functional score F falls below F_crit. Survival probability S(t) = exp(-\\int_0^t \\lambda(s) ds). This links the ODE states to survival endpoints and allows fast vs slow progressor heterogeneity. Functional deficit normalized by F_crit so all terms share month^-1 units (audit revision)."
+    },
+    "heterogeneity": "Per-patient parameters are sampled to produce fast vs slow progressors. Key varying parameters: k1 (0.004-0.030 month^-1), k2 (0.005-0.060 month^-1), k3 (0.000-0.050 month^-1), k4 (0.000-0.030 year^-1), k5 (20-60 points), k6 (0.000-0.150 month^-1), k7 (0.020-0.200 month^-1), k8 (0.030-0.250 month^-1), k9 (0.000-1.500), E (0.0-3.0), a0 (30-80 years), M_crit (0.10-0.35), F_crit (5-15 points), hM (0.020-0.200 month^-1), hF (0.010-0.150 month^-1). Fast progressors: high k1, k2, k3, k7, E, low k6, k8, high hM, hF. Slow progressors: opposite. This yields median survival from onset ranging from ~20 to ~48 months.",
+    "assumptions": [
+      "The system is deterministic and well-mixed; spatial heterogeneity in motor neuron pools is neglected.",
+      "Motor neuron fraction M is normalized to 1 at symptom onset, though significant loss may have occurred pre-symptomatically.",
+      "ALSFRS-R decline is driven primarily by motor neuron loss, with a linear compensation term.",
+      "Neuroinflammation N is a lumped index representing microglial/astrocytic activation and peripheral immune signals.",
+      "EV-RNA burden E is constant per patient over the 60-month window, derived from baseline transcriptomic proxies.",
+      "Age of onset a0 accelerates baseline degeneration linearly above a reference age.",
+      "Mortality hazard depends only on current M and F, not on their rates of change.",
+      "No treatment effects are modeled; the system represents natural history."
+    ],
+    "literature_rationale": [
+      "Motor neuron degeneration in ALS is progressive and approximately exponential in early stages [CITE-NEEDED: motor neuron loss kinetics in ALS].",
+      "Neuroinflammation contributes to motor neuron death via activated microglia and astrocytes [CITE-NEEDED: neuroinflammation in ALS pathogenesis].",
+      "Plasma GLAST+ sEV RNA cargo, including SRP72, NPY2R, and WDR36, may reflect loss of RNA-handling and neuroprotective functions [CITE-NEEDED: EV-RNA biomarkers in ALS].",
+      "ALSFRS-R declines at approximately 0.5-1.5 points/month in fast progressors [CITE-NEEDED: ALSFRS-R progression rates].",
+      "Median survival from onset in ALS is 20-48 months [CITE-NEEDED: ALS natural history survival].",
+      "Age of onset is a known prognostic factor, with older age associated with faster progression [CITE-NEEDED: age of onset effect on ALS progression].",
+      "Functional compensation by remaining motor units can partially mask motor neuron loss [CITE-NEEDED: motor unit compensation in ALS].",
+      "Survival hazard increases sharply when motor neuron reserve or functional score falls below critical thresholds [CITE-NEEDED: thresholds for mortality in ALS]."
+    ],
+    "audit_revisions": [
+      "Eq ALS-2 (functional decline): compensation term is now gated by surviving motor neuron fraction M so that F cannot recover toward F_max after severe motor neuron depletion: dF/dt = -k5(-dM/dt) + k6(F_max - F)M.",
+      "Hazard: the functional-deficit term now uses the normalized deficit (F_crit - F)/F_crit so hF carries consistent units of month^-1: lambda(t) = h0 + hM max(M_crit - M, 0) + hF max((F_crit - F)/F_crit, 0).",
+      "k5 is constrained to [10, 45] so that F_min = F_max - k5 lies below F_crit while F never becomes negative (F is clamped to [0, 48] in the simulator).",
+      "Neuroinflammation index N is bounded in the simulator (N <= 10) to prevent non-physiological explosion of the inflammation-driven death rate."
+    ]
+  }
+}

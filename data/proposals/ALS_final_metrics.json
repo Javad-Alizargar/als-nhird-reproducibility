@@ -1,0 +1,19 @@
+{
+  "disease": "ALS",
+  "dataset_mentions": 49,
+  "invalid_dataset_mentions": 0,
+  "hallucination_rate": 0.0,
+  "budget_compliance": 1,
+  "sample_size_justified": 0,
+  "variable_inclusion": 1,
+  "phase_structure": 1,
+  "has_background": 0,
+  "has_cohort_definition": 1,
+  "has_exposure_outcome": 1,
+  "has_statistical_plan": 1,
+  "structural_score": 0.75,
+  "prompt_tokens": 24163,
+  "completion_tokens": 15999,
+  "completion_chars": 13308,
+  "content_tokens_est": 3327
+}

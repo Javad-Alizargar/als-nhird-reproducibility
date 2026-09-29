@@ -1,0 +1,365 @@
+benchmark,metric,value,unit,detail
+retrieval,latency_ms,4.879,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.868,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.129,ms,"tfidf, query_len=10"
+retrieval,latency_ms,7.245,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.145,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.754,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.154,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.824,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.098,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.91,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.089,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.873,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.154,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.854,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.149,ms,"tfidf, query_len=10"
+retrieval,latency_ms,7.102,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.147,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.818,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.131,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.856,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.099,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.805,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.258,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.951,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.104,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.913,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.141,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.848,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.151,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.849,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.173,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.92,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.101,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.863,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.088,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.985,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.15,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.956,ms,"faiss, query_len=10"
+retrieval,latency_ms,4.286,ms,"tfidf, query_len=10"
+retrieval,latency_ms,7.117,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.108,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.864,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.213,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.879,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.088,ms,"tfidf, query_len=10"
+retrieval,latency_ms,7.033,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.151,ms,"tfidf, query_len=10"
+retrieval,latency_ms,6.891,ms,"faiss, query_len=10"
+retrieval,latency_ms,2.152,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.888,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.2,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.894,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.13,ms,"tfidf, query_len=25"
+retrieval,latency_ms,7.05,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.185,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.92,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.108,ms,"tfidf, query_len=25"
+retrieval,latency_ms,7.03,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.152,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.907,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.217,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.845,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.151,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.965,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.119,ms,"tfidf, query_len=25"
+retrieval,latency_ms,7.004,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.118,ms,"tfidf, query_len=25"
+retrieval,latency_ms,7.004,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.113,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.921,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.187,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.835,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.239,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.889,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.191,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.971,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.205,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.902,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.188,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.958,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.193,ms,"tfidf, query_len=25"
+retrieval,latency_ms,7.007,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.185,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.865,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.109,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.803,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.193,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.913,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.133,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.905,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.155,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.97,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.172,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.975,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.203,ms,"tfidf, query_len=25"
+retrieval,latency_ms,6.909,ms,"faiss, query_len=25"
+retrieval,latency_ms,2.233,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.997,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.153,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.082,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.167,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.053,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.179,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.0,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.182,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.142,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.248,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.021,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.309,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.918,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.179,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.997,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.134,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.051,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.185,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.99,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.251,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.859,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.209,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.969,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.224,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.053,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.226,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.934,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.248,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.962,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.238,ms,"tfidf, query_len=50"
+retrieval,latency_ms,8.195,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.374,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.974,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.199,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.075,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.188,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.407,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.691,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.177,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.204,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.916,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.204,ms,"tfidf, query_len=50"
+retrieval,latency_ms,7.05,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.167,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.989,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.206,ms,"tfidf, query_len=50"
+retrieval,latency_ms,6.971,ms,"faiss, query_len=50"
+retrieval,latency_ms,2.224,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.094,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.325,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.127,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.319,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.106,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.241,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.059,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.247,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.023,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.299,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.138,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.265,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.045,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.289,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.207,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.326,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.186,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.285,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.027,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.283,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.082,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.239,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.156,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.323,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.039,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.273,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.1,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.303,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.118,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.292,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.097,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.326,ms,"tfidf, query_len=100"
+retrieval,latency_ms,6.944,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.356,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.041,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.517,ms,"tfidf, query_len=100"
+retrieval,latency_ms,7.2,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.187,ms,"tfidf, query_len=100"
+retrieval,latency_ms,6.799,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.235,ms,"tfidf, query_len=100"
+retrieval,latency_ms,6.842,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.175,ms,"tfidf, query_len=100"
+retrieval,latency_ms,6.824,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.213,ms,"tfidf, query_len=100"
+retrieval,latency_ms,6.888,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.204,ms,"tfidf, query_len=100"
+retrieval,latency_ms,6.72,ms,"faiss, query_len=100"
+retrieval,latency_ms,2.295,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.018,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.333,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.071,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.3,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.005,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.341,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.98,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.28,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.098,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.272,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.903,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.301,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.046,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.295,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.951,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.31,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.066,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.342,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.193,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.272,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.135,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.321,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.095,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.307,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.988,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.285,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.96,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.299,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.015,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.3,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.9,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.349,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.03,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.356,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.128,ms,"faiss, query_len=200"
+retrieval,latency_ms,4.145,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.114,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.323,ms,"tfidf, query_len=200"
+retrieval,latency_ms,6.959,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.301,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.075,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.292,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.104,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.348,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.77,ms,"faiss, query_len=200"
+retrieval,latency_ms,2.357,ms,"tfidf, query_len=200"
+retrieval,latency_ms,7.026,ms,"faiss, query_len=200"
+retrieval,precision_at5,0.925,fraction,"<bound method Series.mode of query_len             10
+mode               faiss
+latency_ms       6.91575
+precision_at5      0.925
+Name: 0, dtype: object>, query_len=10"
+retrieval,precision_at5,0.925,fraction,"<bound method Series.mode of query_len              10
+mode                tfidf
+latency_ms       2.341083
+precision_at5       0.925
+Name: 1, dtype: object>, query_len=10"
+retrieval,precision_at5,0.8833,fraction,"<bound method Series.mode of query_len              25
+mode                faiss
+latency_ms       6.930417
+precision_at5    0.883333
+Name: 2, dtype: object>, query_len=25"
+retrieval,precision_at5,0.8833,fraction,"<bound method Series.mode of query_len              25
+mode                tfidf
+latency_ms       2.166583
+precision_at5    0.883333
+Name: 3, dtype: object>, query_len=25"
+retrieval,precision_at5,0.9417,fraction,"<bound method Series.mode of query_len              50
+mode                faiss
+latency_ms        7.07425
+precision_at5    0.941667
+Name: 4, dtype: object>, query_len=50"
+retrieval,precision_at5,0.9417,fraction,"<bound method Series.mode of query_len              50
+mode                tfidf
+latency_ms        2.23325
+precision_at5    0.941667
+Name: 5, dtype: object>, query_len=50"
+retrieval,precision_at5,0.95,fraction,"<bound method Series.mode of query_len             100
+mode                faiss
+latency_ms       7.035917
+precision_at5        0.95
+Name: 6, dtype: object>, query_len=100"
+retrieval,precision_at5,0.95,fraction,"<bound method Series.mode of query_len             100
+mode                tfidf
+latency_ms       2.281083
+precision_at5        0.95
+Name: 7, dtype: object>, query_len=100"
+retrieval,precision_at5,1.0,fraction,"<bound method Series.mode of query_len             200
+mode                faiss
+latency_ms       7.067917
+precision_at5         1.0
+Name: 8, dtype: object>, query_len=200"
+retrieval,precision_at5,1.0,fraction,"<bound method Series.mode of query_len           200
+mode              tfidf
+latency_ms       2.3885
+precision_at5       1.0
+Name: 9, dtype: object>, query_len=200"
+concurrency,p50_ms,789.08,ms,concurrency=1
+concurrency,p95_ms,1471.12,ms,concurrency=1
+concurrency,throughput,64.48,jobs/s,concurrency=1
+concurrency,peak_memory,52.55,MB,concurrency=1
+concurrency,p50_ms,520.84,ms,concurrency=2
+concurrency,p95_ms,972.74,ms,concurrency=2
+concurrency,throughput,97.26,jobs/s,concurrency=2
+concurrency,peak_memory,104.79,MB,concurrency=2
+concurrency,p50_ms,510.11,ms,concurrency=4
+concurrency,p95_ms,961.48,ms,concurrency=4
+concurrency,throughput,98.71,jobs/s,concurrency=4
+concurrency,peak_memory,105.01,MB,concurrency=4
+concurrency,p50_ms,976.57,ms,concurrency=8
+concurrency,p95_ms,997.34,ms,concurrency=8
+concurrency,throughput,93.11,jobs/s,concurrency=8
+concurrency,peak_memory,209.77,MB,concurrency=8
+concurrency,p50_ms,1010.4,ms,concurrency=12
+concurrency,p95_ms,1010.76,ms,concurrency=12
+concurrency,throughput,87.41,jobs/s,concurrency=12
+concurrency,peak_memory,314.27,MB,concurrency=12
+concurrency,p50_ms,912.29,ms,concurrency=16
+concurrency,p95_ms,970.99,ms,concurrency=16
+concurrency,throughput,87.19,jobs/s,concurrency=16
+concurrency,peak_memory,210.54,MB,concurrency=16
+concurrency,p50_ms,1011.8,ms,concurrency=24
+concurrency,p95_ms,1066.94,ms,concurrency=24
+concurrency,throughput,80.18,jobs/s,concurrency=24
+concurrency,peak_memory,315.29,MB,concurrency=24
+concurrency,p50_ms,923.64,ms,concurrency=32
+concurrency,p95_ms,1099.96,ms,concurrency=32
+concurrency,throughput,76.85,jobs/s,concurrency=32
+concurrency,peak_memory,367.49,MB,concurrency=32
+concurrency,p50_ms,759.48,ms,concurrency=40
+concurrency,p95_ms,1071.7,ms,concurrency=40
+concurrency,throughput,74.9,jobs/s,concurrency=40
+concurrency,peak_memory,265.05,MB,concurrency=40
+concurrency,p50_ms,867.72,ms,concurrency=50
+concurrency,p95_ms,1083.56,ms,concurrency=50
+concurrency,throughput,70.56,jobs/s,concurrency=50
+concurrency,peak_memory,317.57,MB,concurrency=50
+fee_engine,accuracy,1.0,fraction,500 randomized configs vs independent reference
+fee_engine,mismatches,0.0,count,of 500
+fee_engine,constant_in_source,0.0,bool,per-field rate NT$210 found in local NHRI source corpus
+fee_engine,constant_in_source,0.0,bool,per-field rate NT$240 (>=12 files) found in local NHRI source corpus
+fee_engine,constant_in_source,1.0,bool,"fixed-annual fee NT$4,200 found in local NHRI source corpus"
+review_enforcement,page8_full_date_purposes_complete,1.0,bool,page8_full_date_purposes_complete
+review_enforcement,page8_note_for_health01_02,1.0,bool,page8_note_for_health01_02
+review_enforcement,appl_s_date_justification_present,1.0,bool,appl_s_date_justification_present
+review_enforcement,als_plan_marks_full_date_special_request,1.0,bool,als_plan_marks_full_date_special_request
+review_enforcement,id_field_nonidentification_wording,1.0,bool,id_field_nonidentification_wording
+review_enforcement,briefing_threshold_above_half,1.0,bool,briefing_threshold_above_half
+review_enforcement,briefing_threshold_below_half,1.0,bool,briefing_threshold_below_half
+review_enforcement,hallucination_guard_in_llm_prompt,1.0,bool,hallucination_guard_in_llm_prompt
+review_enforcement,page8_instruction_in_llm_prompt,1.0,bool,page8_instruction_in_llm_prompt
+retrieval,permutation_mwu_p,0.0,p,tfidf vs faiss latency
+retrieval,permutation_mwu_p,0.0,p,tfidf vs faiss latency
+identifiability,ci_width_rel,1.9,relative,kM profile-likelihood
+identifiability,ci_width_rel,0.285,relative,kR profile-likelihood
+identifiability,ci_width_rel,1.9,relative,k2 profile-likelihood
+identifiability,ci_width_rel,0.0,relative,k7 profile-likelihood
+identifiability,ci_width_rel,0.0,relative,k8 profile-likelihood
+firth_hr,hr_mean,2.066,HR,"sampling=1.0mo [1.023,4.055]"
+firth_hr,hr_mean,1.99,HR,"sampling=2.0mo [1.127,3.449]"
+firth_hr,hr_mean,2.024,HR,"sampling=4.0mo [1.093,3.668]"
+firth_hr,hr_mean,1.98,HR,"sampling=12.0mo [1.065,3.32]"
+identifiability,ci_width_rel,1.9,relative,kM profile-likelihood
+identifiability,ci_width_rel,0.285,relative,kR profile-likelihood
+identifiability,ci_width_rel,1.9,relative,k2 profile-likelihood
+identifiability,ci_width_rel,0.0,relative,k7 profile-likelihood
+identifiability,ci_width_rel,0.0,relative,k8 profile-likelihood
+firth_hr,hr_mean,2.066,HR,sampling=1.0mo
+firth_hr,hr_mean,1.99,HR,sampling=2.0mo
+firth_hr,hr_mean,2.024,HR,sampling=4.0mo
+firth_hr,hr_mean,1.98,HR,sampling=12.0mo

@@ -1,0 +1,32 @@
+{
+  "als": {
+    "dataset": "GSE346896",
+    "assay": "RNA-seq (plasma GLAST+ sEV total RNA)",
+    "n_cases": 45,
+    "n_controls": 15,
+    "normalization": "deposited edgeR TMM log2-CPM matrix (protein-coding); independent TMM reimplementation cross-check (median r=0.97)",
+    "test": "per-gene OLS log2FC with limma-style empirical Bayes moderated t (fitFDist); BH FDR",
+    "genes_tested": 19885,
+    "deg_padj05": 3,
+    "deg_padj10": 16,
+    "deg_padj05_lfc1": 3,
+    "ebayes_d0": 1.9381838387609922,
+    "ebayes_s02": 0.9600338997015427,
+    "tmm_cor_deposited_median": 0.9655269792626484,
+    "note": "Batch (Study_1 vs Study_2/4/5) is fully confounded with group; results should be interpreted with this limitation."
+  },
+  "wilson": {
+    "dataset": "GSE197406",
+    "assay": "Affymetrix HG-U133 Plus 2.0 (log2 signals)",
+    "n_cases": 7,
+    "n_controls": 8,
+    "normalization": "deposited log2 signals; probe-level values collapsed to gene symbol mean",
+    "test": "per-gene OLS log2FC with limma-style empirical Bayes moderated t (fitFDist); BH FDR",
+    "genes_tested": 21759,
+    "deg_padj05": 2855,
+    "deg_padj05_lfc1": 734,
+    "ebayes_d0": 4.318981664319002,
+    "ebayes_s02": 0.02213124934162864,
+    "note": "Small cohort (7 WD vs 8 control); controls have other liver pathology; WD cases all cirrhotic."
+  }
+}

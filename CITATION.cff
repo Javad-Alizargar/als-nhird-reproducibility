@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite this reproducibility package when reusing its code or data."
+title: "als-nhird-reproducibility: code and data for the ALS NHIRD proposal-planning and decision-support platform study"
+type: software
+authors:
+  - family-names: Alizargar
+    given-names: Javad
+    orcid: "https://orcid.org/0000-0003-2966-1315"
+    affiliation: "School of Nursing, National Taipei University of Nursing and Health Sciences, Taipei, Taiwan"
+version: 1.0.0
+date-released: 2026-09-28
+keywords:
+  - amyotrophic lateral sclerosis
+  - NHIRD
+  - proposal planning
+  - clinical decision support
+  - physics-informed neural networks
+  - reproducibility
+license: LicenseRef-proprietary
+identifiers:
+  - type: other
+    value: "Zenodo deposition pending; no DOI assigned yet"
+repository-code: "https://github.com/Javad-Alizargar/als-nhird-reproducibility"

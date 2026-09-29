@@ -1,0 +1,181 @@
+group,section,similarity_ratio
+Novice,Title,0.6333
+Novice,Title,0.7111
+Novice,Title,0.7444
+Novice,Title,0.7111
+Novice,Title,0.6556
+Novice,Title,0.6556
+Novice,Title,0.7333
+Novice,Title,0.7889
+Novice,Title,0.6889
+Novice,Title,0.7
+Novice,Title,0.7333
+Novice,Title,0.7889
+Novice,Title,0.7
+Novice,Title,0.6889
+Novice,Title,0.6889
+Novice,Title,0.6778
+Novice,Title,0.8111
+Novice,Title,0.7222
+Novice,Background,0.6971
+Novice,Background,0.67
+Novice,Background,0.7029
+Novice,Background,0.7186
+Novice,Background,0.7057
+Novice,Background,0.7257
+Novice,Background,0.6914
+Novice,Background,0.6871
+Novice,Background,0.7086
+Novice,Background,0.6871
+Novice,Background,0.7343
+Novice,Background,0.7114
+Novice,Background,0.7314
+Novice,Background,0.7314
+Novice,Background,0.7314
+Novice,Background,0.6986
+Novice,Background,0.6971
+Novice,Background,0.7371
+Novice,Cohort definition,0.7192
+Novice,Cohort definition,0.6962
+Novice,Cohort definition,0.7404
+Novice,Cohort definition,0.6942
+Novice,Cohort definition,0.7019
+Novice,Cohort definition,0.6846
+Novice,Cohort definition,0.7288
+Novice,Cohort definition,0.7173
+Novice,Cohort definition,0.7212
+Novice,Cohort definition,0.7038
+Novice,Cohort definition,0.7
+Novice,Cohort definition,0.7192
+Novice,Cohort definition,0.7173
+Novice,Cohort definition,0.7115
+Novice,Cohort definition,0.7423
+Novice,Cohort definition,0.6538
+Novice,Cohort definition,0.7096
+Novice,Cohort definition,0.7115
+Novice,Statistical plan,0.6857
+Novice,Statistical plan,0.7095
+Novice,Statistical plan,0.7048
+Novice,Statistical plan,0.7095
+Novice,Statistical plan,0.6952
+Novice,Statistical plan,0.6976
+Novice,Statistical plan,0.7143
+Novice,Statistical plan,0.6952
+Novice,Statistical plan,0.7429
+Novice,Statistical plan,0.7143
+Novice,Statistical plan,0.7048
+Novice,Statistical plan,0.731
+Novice,Statistical plan,0.6762
+Novice,Statistical plan,0.6976
+Novice,Statistical plan,0.7214
+Novice,Statistical plan,0.7143
+Novice,Statistical plan,0.719
+Novice,Statistical plan,0.719
+Novice,Budget,0.7154
+Novice,Budget,0.6962
+Novice,Budget,0.6923
+Novice,Budget,0.6346
+Novice,Budget,0.6769
+Novice,Budget,0.6615
+Novice,Budget,0.7462
+Novice,Budget,0.6923
+Novice,Budget,0.6615
+Novice,Budget,0.6885
+Novice,Budget,0.6885
+Novice,Budget,0.7462
+Novice,Budget,0.6731
+Novice,Budget,0.7615
+Novice,Budget,0.6923
+Novice,Budget,0.7231
+Novice,Budget,0.6731
+Novice,Budget,0.7192
+Novice,Checklist,0.7105
+Novice,Checklist,0.7
+Novice,Checklist,0.7211
+Novice,Checklist,0.7053
+Novice,Checklist,0.7237
+Novice,Checklist,0.7026
+Novice,Checklist,0.7158
+Novice,Checklist,0.7026
+Novice,Checklist,0.7132
+Novice,Checklist,0.7158
+Novice,Checklist,0.7263
+Novice,Checklist,0.6658
+Novice,Checklist,0.6921
+Novice,Checklist,0.7053
+Novice,Checklist,0.6947
+Novice,Checklist,0.6868
+Novice,Checklist,0.7395
+Novice,Checklist,0.6921
+Senior,Title,0.8889
+Senior,Title,0.9222
+Senior,Title,0.9111
+Senior,Title,0.8778
+Senior,Title,0.9222
+Senior,Title,0.8667
+Senior,Title,0.9222
+Senior,Title,0.8889
+Senior,Title,0.8556
+Senior,Title,0.8778
+Senior,Title,0.8889
+Senior,Title,0.8556
+Senior,Background,0.9129
+Senior,Background,0.8943
+Senior,Background,0.8943
+Senior,Background,0.9143
+Senior,Background,0.9171
+Senior,Background,0.9057
+Senior,Background,0.9043
+Senior,Background,0.9114
+Senior,Background,0.8814
+Senior,Background,0.9014
+Senior,Background,0.8957
+Senior,Background,0.9014
+Senior,Cohort definition,0.9058
+Senior,Cohort definition,0.9058
+Senior,Cohort definition,0.9135
+Senior,Cohort definition,0.9077
+Senior,Cohort definition,0.8827
+Senior,Cohort definition,0.8827
+Senior,Cohort definition,0.9038
+Senior,Cohort definition,0.8981
+Senior,Cohort definition,0.9115
+Senior,Cohort definition,0.8942
+Senior,Cohort definition,0.9
+Senior,Cohort definition,0.9192
+Senior,Statistical plan,0.8905
+Senior,Statistical plan,0.8905
+Senior,Statistical plan,0.8976
+Senior,Statistical plan,0.9024
+Senior,Statistical plan,0.9048
+Senior,Statistical plan,0.9167
+Senior,Statistical plan,0.8929
+Senior,Statistical plan,0.9143
+Senior,Statistical plan,0.9024
+Senior,Statistical plan,0.919
+Senior,Statistical plan,0.9024
+Senior,Statistical plan,0.9167
+Senior,Budget,0.9192
+Senior,Budget,0.9
+Senior,Budget,0.9308
+Senior,Budget,0.9077
+Senior,Budget,0.9308
+Senior,Budget,0.8654
+Senior,Budget,0.9077
+Senior,Budget,0.9462
+Senior,Budget,0.9154
+Senior,Budget,0.8885
+Senior,Budget,0.9077
+Senior,Budget,0.9192
+Senior,Checklist,0.9053
+Senior,Checklist,0.9132
+Senior,Checklist,0.9105
+Senior,Checklist,0.9158
+Senior,Checklist,0.8789
+Senior,Checklist,0.9237
+Senior,Checklist,0.9105
+Senior,Checklist,0.8737
+Senior,Checklist,0.8868
+Senior,Checklist,0.8947
+Senior,Checklist,0.9105
+Senior,Checklist,0.8947

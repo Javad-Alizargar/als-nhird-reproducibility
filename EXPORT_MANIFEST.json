@@ -1,0 +1,265 @@
+{
+  "sources": [
+    {
+      "private": "download/ALS_GSE346896/GSE346896_series_matrix.txt.gz",
+      "public": "data/transcriptomics/GSE346896_series_matrix.txt.gz"
+    },
+    {
+      "private": "download/ALS_GSE346896/GSE346896_discovery_mRNA_TMM_log2CPM_protein_coding.csv.gz",
+      "public": "data/transcriptomics/GSE346896_discovery_mRNA_TMM_log2CPM_protein_coding.csv.gz"
+    },
+    {
+      "private": "download/ALS_GSE346896/GSE346896_discovery_mRNA_raw_counts.csv.gz",
+      "public": "data/transcriptomics/GSE346896_discovery_mRNA_raw_counts.csv.gz"
+    },
+    {
+      "private": "download/ALS_GSE346896/GSE346896_gencode_hg38_gene_annotation.csv.gz",
+      "public": "data/transcriptomics/GSE346896_gencode_hg38_gene_annotation.csv.gz"
+    },
+    {
+      "private": "download/processed/ALS_sample_metadata.csv",
+      "public": "data/ALS_sample_metadata.csv"
+    },
+    {
+      "private": "download/processed/ALS_TMM_log2CPM_expr.csv",
+      "public": "data/ALS_TMM_log2CPM_expr.csv"
+    },
+    {
+      "private": "download/processed/ALS_PCA_scores.csv",
+      "public": "data/ALS_PCA_scores.csv"
+    },
+    {
+      "private": "download/processed/DE_summary.json",
+      "public": "data/DE_summary.json"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_sim.npz",
+      "public": "data/digital_twin/als_sim.npz"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_km.csv",
+      "public": "data/digital_twin/als_km.csv"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_tier_trajectory_high_risk.csv",
+      "public": "data/digital_twin/als_tier_trajectory_high_risk.csv"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_tier_trajectory_low_risk.csv",
+      "public": "data/digital_twin/als_tier_trajectory_low_risk.csv"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_corr_matrix.csv",
+      "public": "data/digital_twin/als_corr_matrix.csv"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_pinn_validation.json",
+      "public": "data/digital_twin/als_pinn_validation.json"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_pinn_state.pt",
+      "public": "data/digital_twin/als_pinn_state.pt"
+    },
+    {
+      "private": "download/processed/als_digital_twin/als_pinn_loss_history.csv",
+      "public": "data/digital_twin/als_pinn_loss_history.csv"
+    },
+    {
+      "private": "download/processed/platform_evaluation/platform_telemetry_stats.csv",
+      "public": "data/platform_eval/platform_telemetry_stats.csv"
+    },
+    {
+      "private": "download/processed/platform_evaluation/sus_scores.csv",
+      "public": "data/platform_eval/sus_scores.csv"
+    },
+    {
+      "private": "download/processed/platform_evaluation/nasa_tlx.csv",
+      "public": "data/platform_eval/nasa_tlx.csv"
+    },
+    {
+      "private": "download/processed/platform_evaluation/completion_time.csv",
+      "public": "data/platform_eval/completion_time.csv"
+    },
+    {
+      "private": "download/processed/platform_evaluation/edit_distance_simulation.csv",
+      "public": "data/platform_eval/edit_distance_simulation.csv"
+    },
+    {
+      "private": "download/processed/proposal_validation/ALS_generations.json",
+      "public": "data/proposals/ALS_generations.json"
+    },
+    {
+      "private": "download/processed/proposal_validation/ALS_final_metrics.json",
+      "public": "data/proposals/ALS_final_metrics.json"
+    },
+    {
+      "private": "manuscripts/ALS/tables/Supp_Table_1_System_Benchmarks.csv",
+      "public": "data/tables/Supp_Table_1_System_Benchmarks.csv"
+    },
+    {
+      "private": "manuscripts/ALS/tables/Supp_Table_2_ALS_DEGs.csv",
+      "public": "data/tables/Supp_Table_2_ALS_DEGs.csv"
+    },
+    {
+      "private": "manuscripts/ALS/tables/Supp_Table_3_ALS_Top100_DEG_Statistics.csv",
+      "public": "data/tables/Supp_Table_3_ALS_Top100_DEG_Statistics.csv"
+    },
+    {
+      "private": "manuscripts/ALS/tables/Supp_Table_4_ALS_Digital_Twins.csv",
+      "public": "data/tables/Supp_Table_4_ALS_Digital_Twins.csv"
+    },
+    {
+      "private": "manuscripts/ALS/tables/Supp_Table_5_Generated_Proposal_Comparison.csv",
+      "public": "data/tables/Supp_Table_5_Generated_Proposal_Comparison.csv"
+    },
+    {
+      "private": "manuscripts/ALS/tables/Supp_Table_6_Power_and_Cost_Matrix.csv",
+      "public": "data/tables/Supp_Table_6_Power_and_Cost_Matrix.csv"
+    },
+    {
+      "private": "manuscripts/ALS/ode_formulation.json",
+      "public": "data/digital_twin/ode_formulation.json"
+    },
+    {
+      "private": "download/nhri_knowledge/Money regulation.txt",
+      "public": "data/nhird_documents/Money regulation.txt"
+    },
+    {
+      "private": "download/nhri_knowledge/review rules.txt",
+      "public": "data/nhird_documents/review rules.txt"
+    },
+    {
+      "private": "download/nhri_knowledge/nhri_dataset_categories_expanded.txt",
+      "public": "data/nhird_documents/nhri_dataset_categories_expanded.txt"
+    },
+    {
+      "private": "download/nhri_knowledge/regulation_20260528.pdf",
+      "public": "data/nhird_documents/regulation_20260528.pdf"
+    },
+    {
+      "private": "download/nhri_knowledge/datasets_not expanded.pdf",
+      "public": "data/nhird_documents/datasets_not expanded.pdf"
+    },
+    {
+      "private": "manuscripts/ALS/figures/Figure_1_System_Benchmarking.png",
+      "public": "figures/Figure_1_System_Benchmarking.png"
+    },
+    {
+      "private": "manuscripts/ALS/figures/Figure_2_ALS_Transcriptomics.png",
+      "public": "figures/Figure_2_ALS_Transcriptomics.png"
+    },
+    {
+      "private": "manuscripts/ALS/figures/Figure_3_ALS_Digital_Twin.png",
+      "public": "figures/Figure_3_ALS_Digital_Twin.png"
+    },
+    {
+      "private": "manuscripts/ALS/figures/Figure_4_Proposal_Optimization.png",
+      "public": "figures/Figure_4_Proposal_Optimization.png"
+    },
+    {
+      "private": "manuscripts/ALS/figures/Figure_5_NHIRD_Economics.png",
+      "public": "figures/Figure_5_NHIRD_Economics.png"
+    },
+    {
+      "private": "manuscripts/ALS/figures/Figure_6_Platform_Evaluation.png",
+      "public": "figures/Figure_6_Platform_Evaluation.png"
+    }
+  ],
+  "adaptations": {
+    "code/de_pipeline.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "os.path.join(ROOT, \"download\", \"ALS_GSE346896\")",
+        "to": "str(SITE / \"data\" / \"transcriptomics\")"
+      },
+      {
+        "from": "os.path.join(ROOT, \"download\", \"processed\")",
+        "to": "str(SITE / \"data\")"
+      }
+    ],
+    "code/transcriptomics_figure.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "os.path.join(ROOT, \"download\", \"processed\")",
+        "to": "str(SITE / \"data\")"
+      }
+    ],
+    "code/digital_twin.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      }
+    ],
+    "code/figure2_als.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "os.path.join(ROOT, \"download\", \"processed\")",
+        "to": "str(SITE / \"data\")"
+      }
+    ],
+    "code/economics_figure.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      }
+    ],
+    "code/telemetry_figure.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      }
+    ],
+    "code/figure_refinements.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      }
+    ],
+    "code/benchmarking.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      }
+    ],
+    "code/proposal_validation.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      }
+    ],
+    "code/ode_formulation.py": [
+      {
+        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
+        "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "os.path.join(ROOT, \"manuscripts\", \"ALS\", \"ode_formulation.json\")",
+        "to": "str(SITE / \"data\" / \"digital_twin\" / \"ode_formulation.json\")"
+      }
+    ]
+  },
+  "platform_files": [
+    "__init__.py",
+    "catalog.py",
+    "config.py",
+    "documents.py",
+    "llm.py",
+    "planner.py",
+    "projects.py",
+    "retrieval.py",
+    "review_guidance.py",
+    "rules.py"
+  ],
+  "redactions": [
+    "nhri_dataset_categories_expanded.txt: greeting email address replaced (no effect on catalogue content)"
+  ]
+}
