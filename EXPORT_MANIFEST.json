@@ -178,6 +178,10 @@
       {
         "from": "os.path.join(ROOT, \"download\", \"processed\")",
         "to": "str(SITE / \"data\")"
+      },
+      {
+        "from": "os.path.join(ROOT, \"manuscript\", \"tables\")",
+        "to": "str(SITE / \"data\" / \"tables\")"
       }
     ],
     "code/transcriptomics_figure.py": [
@@ -188,12 +192,24 @@
       {
         "from": "os.path.join(ROOT, \"download\", \"processed\")",
         "to": "str(SITE / \"data\")"
+      },
+      {
+        "from": "os.path.join(ROOT, \"manuscript\", \"tables\")",
+        "to": "str(SITE / \"data\" / \"tables\")"
+      },
+      {
+        "from": "os.path.join(ROOT, \"manuscript\", \"figures\")",
+        "to": "str(SITE / \"figures\")"
       }
     ],
     "code/digital_twin.py": [
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
         "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "os.path.join(ROOT, \"download\", \"processed\", \"als_digital_twin\")",
+        "to": "str(SITE / \"data\" / \"digital_twin\")"
       }
     ],
     "code/figure2_als.py": [
@@ -210,30 +226,158 @@
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
         "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\" / \"economics\"",
+        "to": "SITE / \"data\" / \"economics\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"tables\"",
+        "to": "SITE / \"data\" / \"tables\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"figures\"",
+        "to": "SITE / \"figures\""
       }
     ],
     "code/telemetry_figure.py": [
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
         "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\" / \"platform_evaluation\"",
+        "to": "SITE / \"data\" / \"platform_eval\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"figures\"",
+        "to": "SITE / \"figures\""
+      },
+      {
+        "from": "ROOT / \"apis\" / \"deepseek.txt\"",
+        "to": "Path(os.environ.get(\"DEEPSEEK_KEY_FILE\", \"/dev/null\"))"
       }
     ],
     "code/figure_refinements.py": [
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
         "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\" / \"audit\"",
+        "to": "SITE / \"data\" / \"audit\""
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\"",
+        "to": "SITE / \"data\""
+      },
+      {
+        "from": "ROOT / \"download\" / \"nhri_knowledge\"",
+        "to": "SITE / \"data\" / \"nhird_documents\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"tables\"",
+        "to": "SITE / \"data\" / \"tables\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"figures\"",
+        "to": "SITE / \"figures\""
+      },
+      {
+        "from": "ROOT / \"JIM_ALS_Submission_Package\" / \"figures\"",
+        "to": "SITE / \"figures\""
+      },
+      {
+        "from": "ROOT / \"codebase_pkg\"",
+        "to": "SITE / \"code\""
+      },
+      {
+        "from": "str(PKG)",
+        "to": "str(SITE / \"code\")"
+      },
+      {
+        "from": "str(PKG / \"nhri_app\")",
+        "to": "str(SITE / \"code\" / \"platform\" / \"nhri_app\")"
       }
     ],
     "code/benchmarking.py": [
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
         "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\" / \"bench_practice.sqlite\"",
+        "to": "SITE / \"data\" / \"bench_practice.sqlite\""
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\" / \"benchmark_data.npz\"",
+        "to": "SITE / \"data\" / \"benchmark_data.npz\""
+      },
+      {
+        "from": "ROOT / \"download\" / \"nhri_knowledge\"",
+        "to": "SITE / \"data\" / \"nhird_documents\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"tables\"",
+        "to": "SITE / \"data\" / \"tables\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / sub / \"figures\"",
+        "to": "SITE / \"figures\""
+      },
+      {
+        "from": "ROOT / \"codebase_pkg\"",
+        "to": "SITE / \"code\""
+      },
+      {
+        "from": "str(PKG)",
+        "to": "str(SITE / \"code\")"
+      },
+      {
+        "from": "str(PKG / \"nhri_app\")",
+        "to": "str(SITE / \"code\" / \"platform\" / \"nhri_app\")"
       }
     ],
     "code/proposal_validation.py": [
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
         "to": "str(Path(__file__).resolve().parent.parent)"
+      },
+      {
+        "from": "ROOT / \"download\" / \"processed\" / \"proposal_validation\"",
+        "to": "SITE / \"data\" / \"proposals\""
+      },
+      {
+        "from": "ROOT / \"download\" / \"nhri_knowledge\"",
+        "to": "SITE / \"data\" / \"nhird_documents\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / disease / \"tables\"",
+        "to": "SITE / \"data\" / \"tables\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / disease / \"figures\"",
+        "to": "SITE / \"figures\""
+      },
+      {
+        "from": "ROOT / \"manuscripts\" / disease / \"drafts\"",
+        "to": "SITE / \"data\" / \"proposals\" / \"drafts\""
+      },
+      {
+        "from": "ROOT / \"codebase_pkg\"",
+        "to": "SITE / \"code\""
+      },
+      {
+        "from": "ROOT / \"apis\" / \"deepseek.txt\"",
+        "to": "Path(os.environ.get(\"DEEPSEEK_KEY_FILE\", \"/dev/null\"))"
+      },
+      {
+        "from": "str(PKG)",
+        "to": "str(SITE / \"code\")"
+      },
+      {
+        "from": "str(PKG / \"nhri_app\")",
+        "to": "str(SITE / \"code\" / \"platform\" / \"nhri_app\")"
       }
     ],
     "code/ode_formulation.py": [

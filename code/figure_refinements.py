@@ -18,12 +18,12 @@ from matplotlib.colors import ListedColormap
 from scipy import stats
 
 ROOT = Path("str(Path(__file__).resolve().parent.parent)")
-AUDIT_OUT = ROOT / "download" / "processed" / "audit"
-PROC = ROOT / "download" / "processed"
-PKG = ROOT / "codebase_pkg"
-sys.path.insert(0, str(PKG))
-sys.path.insert(0, str(PKG / "nhri_app"))
-os.environ["NHRI_SOURCE_DIR"] = str(ROOT / "download" / "nhri_knowledge")
+AUDIT_OUT = SITE / "data" / "audit"
+PROC = SITE / "data"
+PKG = SITE / "code"
+sys.path.insert(0, str(SITE / "code"))
+sys.path.insert(0, str(SITE / "code" / "platform" / "nhri_app"))
+os.environ["NHRI_SOURCE_DIR"] = str(SITE / "data" / "nhird_documents")
 
 ALS_CASE = "#D55E00"
 CTRL = "#0072B2"
@@ -141,12 +141,12 @@ def fig1(sub, cfg):
         "figure.dpi": 300,
         "savefig.dpi": 300,
     })
-    _t4 = ROOT / "manuscripts" / sub / "tables" / "Supp_Table_4_System_Benchmarks.csv"
+    _t4 = SITE / "data" / "tables" / "Supp_Table_4_System_Benchmarks.csv"
     if not _t4.exists():
-        _t4 = ROOT / "manuscripts" / sub / "tables" / \
+        _t4 = SITE / "data" / "tables" / \
             "Supp_Table_1_System_Benchmarks.csv"
     bench = pd.read_csv(_t4)
-    pkg_figs = ROOT / "JIM_ALS_Submission_Package" / "figures"
+    pkg_figs = SITE / "figures"
 
     fig = plt.figure(figsize=(10.5, 7.5), layout="constrained")
     axes = fig.subplot_mosaic("""AB\nCD""")
@@ -241,7 +241,7 @@ def fig1(sub, cfg):
     from nhri_app.catalog import parse_catalog, DatasetDef, FieldDef
     from nhri_app import rules as fee_rules
     datasets_c = parse_catalog(
-        ROOT / "download" / "nhri_knowledge" / "nhri_dataset_categories_expanded.txt")
+        SITE / "data" / "nhird_documents" / "nhri_dataset_categories_expanded.txt")
     rng_c = np.random.default_rng(20260924)
     tier = lambda v: 0 if v == 0 else (1 if v < 50000 else
                                        (2 if v < 200000 else 3))
@@ -365,16 +365,16 @@ def fig1(sub, cfg):
              color="#64748B")
 
 # ---------- outputs: package + workspace mirrors ----------
-    out = ROOT / "manuscripts" / sub / "figures" / "Figure_1_System_Benchmarking.png"
+    out = SITE / "figures" / "Figure_1_System_Benchmarking.png"
     fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
     fig.savefig(str(out).replace(".png", ".pdf"), bbox_inches="tight",
                 facecolor="white")
-    tiff_dir = ROOT / "manuscripts" / sub / "figures" / "tiff"
+    tiff_dir = SITE / "figures" / "tiff"
     tiff_dir.mkdir(exist_ok=True)
     tiff_ws = tiff_dir / "Figure_1_System_Benchmarking.tiff"
     fig.savefig(tiff_ws, dpi=300, format="tiff",
                 pil_kwargs={"compression": "tiff_lzw"}, facecolor="white")
-    prev_dir = ROOT / "manuscripts" / sub / "figures" / "preview"
+    prev_dir = SITE / "figures" / "preview"
     prev_dir.mkdir(exist_ok=True)
     shutil.copy(out, prev_dir / out.name)
     # submission-package copies
@@ -416,17 +416,17 @@ def fig2(sub, cfg, disease_label):
     scores = pd.read_csv(PROC / (f"Wilson_PCA_scores.csv" if
                                  disease_label == "Wilson" else
                                  "ALS_PCA_scores.csv"), index_col=0)
-    _deg1 = ROOT / "manuscripts" / sub / "tables" / \
+    _deg1 = SITE / "data" / "tables" / \
         ("Supp_Table_2_Wilson_DEGs.csv" if disease_label == "Wilson"
          else "Supp_Table_1_ALS_DEGs.csv")
     if not _deg1.exists() and disease_label == "ALS":
-        _deg1 = ROOT / "manuscripts" / sub / "tables" / "Supp_Table_2_ALS_DEGs.csv"
+        _deg1 = SITE / "data" / "tables" / "Supp_Table_2_ALS_DEGs.csv"
     res = pd.read_csv(_deg1)
     ev = {"PC1": 0.66, "PC2": 0.088} if disease_label == "Wilson" \
         else {"PC1": 0.172, "PC2": 0.04}
     case = "WD" if disease_label == "Wilson" else "ALS"
     case_lab = "Wilson's disease" if disease_label == "Wilson" else "ALS"
-    pkg_figs = ROOT / "JIM_ALS_Submission_Package" / "figures"
+    pkg_figs = SITE / "figures"
 
     fig = plt.figure(figsize=(10.5, 7.5), layout="constrained")
     axes = fig.subplot_mosaic("""AB\nCD""")
@@ -618,17 +618,17 @@ def fig2(sub, cfg, disease_label):
         ax.set_title("D  Batch composition by group", loc="left", pad=8)
 
     # ---------- outputs: workspace + package ----------
-    out = ROOT / "manuscripts" / sub / "figures" / \
+    out = SITE / "figures" / \
         f"Figure_2_{disease_label}_Transcriptomics.png"
     fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
     fig.savefig(str(out).replace(".png", ".pdf"), bbox_inches="tight",
                 facecolor="white")
-    tiff_dir = ROOT / "manuscripts" / sub / "figures" / "tiff"
+    tiff_dir = SITE / "figures" / "tiff"
     tiff_dir.mkdir(exist_ok=True)
     tiff_ws = tiff_dir / f"Figure_2_{disease_label}_Transcriptomics.tiff"
     fig.savefig(tiff_ws, dpi=300, format="tiff",
                 pil_kwargs={"compression": "tiff_lzw"}, facecolor="white")
-    prev_dir = ROOT / "manuscripts" / sub / "figures" / "preview"
+    prev_dir = SITE / "figures" / "preview"
     prev_dir.mkdir(exist_ok=True)
     shutil.copy(out, prev_dir / out.name)
     (pkg_figs / "png").mkdir(parents=True, exist_ok=True)
@@ -753,7 +753,7 @@ def fig3(sub, cfg, disease_label):
         ax.set_title("D  Gene-progression sensitivity matrix", loc="left", pad=6)
 
     fig.tight_layout(pad=1.3)
-    out = ROOT / "manuscripts" / sub / "figures" / \
+    out = SITE / "figures" / \
         f"Figure_3_{disease_label}_Digital_Twin.png"
     fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
     fig.savefig(str(out).replace(".png", ".pdf"), bbox_inches="tight",
@@ -765,7 +765,7 @@ def fig3(sub, cfg, disease_label):
 def fig4(sub, cfg):
     fl = flags_for(cfg, "Figure_4_Proposal_Optimization")
     base_style(fl["enlarge"])
-    df = pd.read_csv(ROOT / "manuscripts" / sub / "tables" /
+    df = pd.read_csv(SITE / "data" / "tables" /
                      "Supp_Table_5_Generated_Proposal_Comparison.csv")
     fig, axes = plt.subplots(2, 2, figsize=(10.5, 7.5))
 
@@ -851,7 +851,7 @@ def fig4(sub, cfg):
     ax.legend(frameon=False, fontsize=6.5, loc="lower right")
 
     fig.tight_layout(pad=1.3)
-    out = ROOT / "manuscripts" / sub / "figures" / "Figure_4_Proposal_Optimization.png"
+    out = SITE / "figures" / "Figure_4_Proposal_Optimization.png"
     fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
     fig.savefig(str(out).replace(".png", ".pdf"), bbox_inches="tight",
                 facecolor="white")

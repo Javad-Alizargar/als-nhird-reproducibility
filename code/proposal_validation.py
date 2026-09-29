@@ -17,12 +17,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path("str(Path(__file__).resolve().parent.parent)")
-PKG = ROOT / "codebase_pkg"
-KNOW = ROOT / "download" / "nhri_knowledge"
-PROC = ROOT / "download" / "processed" / "proposal_validation"
+PKG = SITE / "code"
+KNOW = SITE / "data" / "nhird_documents"
+PROC = SITE / "data" / "proposals"
 os.makedirs(PROC, exist_ok=True)
-sys.path.insert(0, str(PKG))
-sys.path.insert(0, str(PKG / "nhri_app"))
+sys.path.insert(0, str(SITE / "code"))
+sys.path.insert(0, str(SITE / "code" / "platform" / "nhri_app"))
 os.environ["NHRI_SOURCE_DIR"] = str(KNOW)
 
 from openai import OpenAI
@@ -32,7 +32,7 @@ from nhri_app.retrieval import Retriever
 from nhri_app import planner as pl
 from nhri_app.llm import PLAN_PROMPT, generate_plan_with_deepseek
 
-key = open(ROOT / "apis" / "deepseek.txt").read().strip().split()[0]
+key = open(Path(os.environ.get("DEEPSEEK_KEY_FILE", "/dev/null"))).read().strip().split()[0]
 client = OpenAI(api_key=key, base_url="https://api.deepseek.com")
 MODEL = "deepseek-flash"
 
@@ -210,7 +210,7 @@ for disease in ["ALS", "Wilson"]:
         rows.append({k: v for k, v in r.items() if k != "text"})
     df = pd.DataFrame(rows)
     df = df.sort_values(["paradigm", "run_id"]).reset_index(drop=True)
-    df.to_csv(ROOT / "manuscripts" / disease / "tables" /
+    df.to_csv(SITE / "data" / "tables" /
               "Supp_Table_5_Generated_Proposal_Comparison.csv", index=False)
     with open(PROC / f"{disease}_generations.json", "w") as f:
         json.dump(results, f, ensure_ascii=False)
@@ -259,7 +259,7 @@ for disease in ["ALS", "Wilson"]:
           f"## Deterministic platform skeleton (dataset/variable truth)\n\n"
           f"{skeleton[:12000]}\n\n"
           f"## AI-generated application narrative\n\n{final_text}\n")
-    out = ROOT / "manuscripts" / disease / "drafts" / "final_generated_proposal.md"
+    out = SITE / "data" / "proposals" / "drafts" / "final_generated_proposal.md"
     out.write_text(md, encoding="utf-8")
     print(f"saved {out} ({len(md):,} chars)")
 
@@ -358,7 +358,7 @@ for disease, df in zip(["ALS", "Wilson"], all_rows):
     ax.set_ylim(bottom=0)
 
     fig.tight_layout(pad=1.3)
-    out = ROOT / "manuscripts" / disease / "figures" / "Figure_4_Proposal_Optimization.png"
+    out = SITE / "figures" / "Figure_4_Proposal_Optimization.png"
     fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     print("saved", out, f"({os.path.getsize(out):,} bytes)")

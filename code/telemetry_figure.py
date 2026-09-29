@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 ROOT = Path("str(Path(__file__).resolve().parent.parent)")
-OUT_PROC = ROOT / "download" / "processed" / "platform_evaluation"
+OUT_PROC = SITE / "data" / "platform_eval"
 os.makedirs(OUT_PROC, exist_ok=True)
 
 plt.rcParams.update({
@@ -31,7 +31,7 @@ rng = np.random.default_rng(20260924)
 
 def live_llm_latency(n=3):
     from openai import OpenAI
-    key = open(ROOT / "apis" / "deepseek.txt", encoding="utf-8").read().strip().split()[0]
+    key = open(Path(os.environ.get("DEEPSEEK_KEY_FILE", "/dev/null")), encoding="utf-8").read().strip().split()[0]
     client = OpenAI(api_key=key, base_url="https://api.deepseek.com")
     lats = []
     for i in range(n):
@@ -266,7 +266,7 @@ def main():
                     color="#C62828")
 
         fig.tight_layout(pad=1.3)
-        out = ROOT / "manuscripts" / sub / "figures" / \
+        out = SITE / "figures" / \
             "Figure_6_Platform_Evaluation.png"
         fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
         fig.savefig(str(out).replace(".png", ".pdf"), bbox_inches="tight",

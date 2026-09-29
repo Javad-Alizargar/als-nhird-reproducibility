@@ -13,7 +13,7 @@ from scipy.integrate import solve_ivp
 
 ROOT = "str(Path(__file__).resolve().parent.parent)"
 ALS_DIR = os.path.join(ROOT, "manuscripts", "ALS")
-OUT_DIR = os.path.join(ROOT, "download", "processed", "als_digital_twin")
+OUT_DIR = str(SITE / "data" / "digital_twin")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 spec = json.load(open(os.path.join(ALS_DIR, "ode_formulation.json")))["model"]

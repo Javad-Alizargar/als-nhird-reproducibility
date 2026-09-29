@@ -19,10 +19,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path("str(Path(__file__).resolve().parent.parent)")
-PKG = ROOT / "codebase_pkg"
-KNOW = ROOT / "download" / "nhri_knowledge"
-sys.path.insert(0, str(PKG))
-sys.path.insert(0, str(PKG / "nhri_app"))
+PKG = SITE / "code"
+KNOW = SITE / "data" / "nhird_documents"
+sys.path.insert(0, str(SITE / "code"))
+sys.path.insert(0, str(SITE / "code" / "platform" / "nhri_app"))
 os.environ["NHRI_SOURCE_DIR"] = str(KNOW)
 
 from nhri_app.catalog import parse_catalog, DatasetDef, FieldDef
@@ -99,7 +99,7 @@ print("=" * 60)
 print("B. CONCURRENT LOAD TEST (1-50 workers)")
 print("=" * 60)
 
-db_path = ROOT / "download" / "processed" / "bench_practice.sqlite"
+db_path = SITE / "data" / "bench_practice.sqlite"
 if db_path.exists():
     db_path.unlink()
 
@@ -318,7 +318,7 @@ enforce_df = pd.DataFrame({"rule": list(enforcement.keys()),
 
 bench_df = pd.DataFrame(bench_rows)
 for sub in ["ALS", "Wilson"]:
-    bench_df.to_csv(ROOT / "manuscripts" / sub / "tables" /
+    bench_df.to_csv(SITE / "data" / "tables" /
                     "Supp_Table_4_System_Benchmarks.csv", index=False)
 print("Supp_Table_4 saved for ALS and Wilson")
 
@@ -403,12 +403,12 @@ ax.set_title("D  Review-rule enforcement matrix", loc="left", pad=6)
 
 fig.tight_layout(pad=1.3)
 for sub in ["ALS", "Wilson"]:
-    out = ROOT / "manuscripts" / sub / "figures" / "Figure_1_System_Benchmarking.png"
+    out = SITE / "figures" / "Figure_1_System_Benchmarking.png"
     fig.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
     print("saved", out, f"({os.path.getsize(out):,} bytes)")
 plt.close(fig)
 
-np.savez_compressed(ROOT / "download" / "processed" / "benchmark_data.npz",
+np.savez_compressed(SITE / "data" / "benchmark_data.npz",
                     ret=ret_sum.to_records(index=False),
                     load=load_df.to_records(index=False))
 print("benchmark data saved")

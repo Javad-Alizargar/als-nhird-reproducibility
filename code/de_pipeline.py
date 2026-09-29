@@ -16,7 +16,7 @@ ROOT = "str(Path(__file__).resolve().parent.parent)"
 ALS_DIR = str(SITE / "data" / "transcriptomics")
 WD_DIR = os.path.join(ROOT, "download", "Wilson_GSE197406")
 OUT_DIR = str(SITE / "data")
-TABLES = os.path.join(ROOT, "manuscript", "tables")
+TABLES = str(SITE / "data" / "tables")
 os.makedirs(OUT_DIR, exist_ok=True)
 os.makedirs(TABLES, exist_ok=True)
 

@@ -13,8 +13,8 @@ from sklearn.decomposition import PCA
 
 ROOT = "str(Path(__file__).resolve().parent.parent)"
 PROC = str(SITE / "data")
-TABLES = os.path.join(ROOT, "manuscript", "tables")
-FIGDIR = os.path.join(ROOT, "manuscript", "figures")
+TABLES = str(SITE / "data" / "tables")
+FIGDIR = str(SITE / "figures")
 os.makedirs(FIGDIR, exist_ok=True)
 
 ALS_CASE = "#D55E00"
