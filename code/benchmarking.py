@@ -22,7 +22,7 @@ ROOT = Path("str(Path(__file__).resolve().parent.parent)")
 PKG = SITE / "code"
 KNOW = SITE / "data" / "nhird_documents"
 sys.path.insert(0, str(SITE / "code"))
-sys.path.insert(0, str(SITE / "code" / "platform" / "nhri_app"))
+sys.path.insert(0, str(SITE / "code" / "platform"))
 os.environ["NHRI_SOURCE_DIR"] = str(KNOW)
 
 from nhri_app.catalog import parse_catalog, DatasetDef, FieldDef

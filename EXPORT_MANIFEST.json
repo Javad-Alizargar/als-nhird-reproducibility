@@ -184,24 +184,6 @@
         "to": "str(SITE / \"data\" / \"tables\")"
       }
     ],
-    "code/transcriptomics_figure.py": [
-      {
-        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
-        "to": "str(Path(__file__).resolve().parent.parent)"
-      },
-      {
-        "from": "os.path.join(ROOT, \"download\", \"processed\")",
-        "to": "str(SITE / \"data\")"
-      },
-      {
-        "from": "os.path.join(ROOT, \"manuscript\", \"tables\")",
-        "to": "str(SITE / \"data\" / \"tables\")"
-      },
-      {
-        "from": "os.path.join(ROOT, \"manuscript\", \"figures\")",
-        "to": "str(SITE / \"figures\")"
-      }
-    ],
     "code/digital_twin.py": [
       {
         "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
@@ -210,16 +192,6 @@
       {
         "from": "os.path.join(ROOT, \"download\", \"processed\", \"als_digital_twin\")",
         "to": "str(SITE / \"data\" / \"digital_twin\")"
-      }
-    ],
-    "code/figure2_als.py": [
-      {
-        "from": "PRIVATE_ROOT (absolute path of the private workspace, redacted)",
-        "to": "str(Path(__file__).resolve().parent.parent)"
-      },
-      {
-        "from": "os.path.join(ROOT, \"download\", \"processed\")",
-        "to": "str(SITE / \"data\")"
       }
     ],
     "code/economics_figure.py": [
@@ -297,7 +269,7 @@
       },
       {
         "from": "str(PKG / \"nhri_app\")",
-        "to": "str(SITE / \"code\" / \"platform\" / \"nhri_app\")"
+        "to": "str(SITE / \"code\" / \"platform\")"
       }
     ],
     "code/benchmarking.py": [
@@ -335,7 +307,7 @@
       },
       {
         "from": "str(PKG / \"nhri_app\")",
-        "to": "str(SITE / \"code\" / \"platform\" / \"nhri_app\")"
+        "to": "str(SITE / \"code\" / \"platform\")"
       }
     ],
     "code/proposal_validation.py": [
@@ -377,7 +349,7 @@
       },
       {
         "from": "str(PKG / \"nhri_app\")",
-        "to": "str(SITE / \"code\" / \"platform\" / \"nhri_app\")"
+        "to": "str(SITE / \"code\" / \"platform\")"
       }
     ],
     "code/ode_formulation.py": [

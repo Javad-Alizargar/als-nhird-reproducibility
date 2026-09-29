@@ -22,7 +22,7 @@ AUDIT_OUT = SITE / "data" / "audit"
 PROC = SITE / "data"
 PKG = SITE / "code"
 sys.path.insert(0, str(SITE / "code"))
-sys.path.insert(0, str(SITE / "code" / "platform" / "nhri_app"))
+sys.path.insert(0, str(SITE / "code" / "platform"))
 os.environ["NHRI_SOURCE_DIR"] = str(SITE / "data" / "nhird_documents")
 
 ALS_CASE = "#D55E00"

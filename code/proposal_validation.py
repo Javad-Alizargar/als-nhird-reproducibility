@@ -22,7 +22,7 @@ KNOW = SITE / "data" / "nhird_documents"
 PROC = SITE / "data" / "proposals"
 os.makedirs(PROC, exist_ok=True)
 sys.path.insert(0, str(SITE / "code"))
-sys.path.insert(0, str(SITE / "code" / "platform" / "nhri_app"))
+sys.path.insert(0, str(SITE / "code" / "platform"))
 os.environ["NHRI_SOURCE_DIR"] = str(KNOW)
 
 from openai import OpenAI

@@ -82,7 +82,6 @@ output: `RESULT: ALL CHECKS PASSED` with exit code 0.
 ## Regenerating figures and tables
 
 ```
-python3 code/transcriptomics_figure.py        # Figure 2 (PCA/volcano/strip/batch)
 python3 code/economics_figure.py              # Figure 5 (power/cost/attrition/ascertainment)
 FIG_SUBS=ALS python3 code/telemetry_figure.py # Figure 6 (telemetry + simulated profiles)
 python3 code/figure_refinements.py            # Figures 1-4 (benchmarks/transcriptomics/twin/proposals)
