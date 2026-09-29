@@ -645,8 +645,8 @@ def fig2(sub, cfg, disease_label):
 def fig3(sub, cfg, disease_label):
     fl = flags_for(cfg, f"Figure_3_{disease_label}_Digital_Twin")
     base_style(fl["enlarge"])
-    d = PROC / (f"als_digital_twin" if disease_label == "ALS"
-                else "wilson_digital_twin")
+    d = SITE / "data" / "digital_twin"  # ALS-only export
+                # (Wilson branch removed in the ALS-only export)
     hist = pd.read_csv(d / f"{'als' if disease_label=='ALS' else 'wilson'}_pinn_loss_history.csv")
     km = pd.read_csv(d / f"{'als' if disease_label=='ALS' else 'wilson'}_km.csv")
 

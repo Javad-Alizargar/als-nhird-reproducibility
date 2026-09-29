@@ -244,6 +244,14 @@
         "to": "SITE / \"data\" / \"audit\""
       },
       {
+        "from": "d = PROC / (f\"als_digital_twin\" if disease_label == \"ALS\"",
+        "to": "d = SITE / \"data\" / \"digital_twin\"  # ALS-only export"
+      },
+      {
+        "from": "else \"wilson_digital_twin\")",
+        "to": "# (Wilson branch removed in the ALS-only export)"
+      },
+      {
         "from": "ROOT / \"download\" / \"processed\"",
         "to": "SITE / \"data\""
       },
