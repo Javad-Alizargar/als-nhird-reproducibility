@@ -12,10 +12,9 @@ does not contain the manuscript or submission documents.
 ## What is included
 
 - `data/` — archived records used by the analyses:
-  - `benchmarks/` is archived via `data/tables/Supp_Table_1_System_Benchmarks.csv`
-    (324 measurement rows: retrieval latency, Precision@5, concurrency
-    percentiles, throughput, tracemalloc peak, fee-engine and review-rule
-    results).
+  - `data/tables/Supp_Table_1_System_Benchmarks.csv` — 324 measurement rows:
+    retrieval latency, Precision@5, concurrency percentiles, throughput,
+    tracemalloc peak, fee-engine and review-rule results.
   - `transcriptomics/` — GSE346896 deposited matrices and annotation (gzip),
     sample metadata, the analysis-ready TMM log2-CPM matrix, PCA scores,
     and the complete differential-expression table
