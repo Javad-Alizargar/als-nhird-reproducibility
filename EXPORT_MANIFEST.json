@@ -244,10 +244,6 @@
         "to": "SITE / \"data\" / \"audit\""
       },
       {
-        "from": "PROC / (f\"als_digital_twin\"",
-        "to": "(SITE / \"data\" / \"digital_twin\")"
-      },
-      {
         "from": "ROOT / \"download\" / \"processed\"",
         "to": "SITE / \"data\""
       },
