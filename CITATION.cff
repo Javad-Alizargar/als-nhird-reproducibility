@@ -7,8 +7,8 @@ authors:
     given-names: Javad
     orcid: "https://orcid.org/0000-0003-2966-1315"
     affiliation: "School of Nursing, National Taipei University of Nursing and Health Sciences, Taipei, Taiwan"
-version: 1.0.0
-date-released: 2026-09-28
+version: 1.4.0
+date-released: 2026-09-30
 keywords:
   - amyotrophic lateral sclerosis
   - NHIRD
@@ -16,8 +16,5 @@ keywords:
   - clinical decision support
   - physics-informed neural networks
   - reproducibility
-license: LicenseRef-proprietary
-identifiers:
-  - type: other
-    value: "Zenodo deposition pending; no DOI assigned yet"
+license: MIT
 repository-code: "https://github.com/Javad-Alizargar/als-nhird-reproducibility"

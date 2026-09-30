@@ -163,6 +163,31 @@
     {
       "private": "manuscripts/ALS/figures/Figure_6_Platform_Evaluation.png",
       "public": "figures/Figure_6_Platform_Evaluation.png"
+    },
+    {
+      "private": "public_templates/LICENSE",
+      "public": "LICENSE",
+      "note": "maintained template (licensing and archival metadata)"
+    },
+    {
+      "private": "public_templates/LICENSING.md",
+      "public": "LICENSING.md",
+      "note": "maintained template (licensing and archival metadata)"
+    },
+    {
+      "private": "public_templates/README.md",
+      "public": "README.md",
+      "note": "maintained template (licensing and archival metadata)"
+    },
+    {
+      "private": "public_templates/CITATION.cff",
+      "public": "CITATION.cff",
+      "note": "maintained template (licensing and archival metadata)"
+    },
+    {
+      "private": "public_templates/.zenodo.json",
+      "public": ".zenodo.json",
+      "note": "maintained template (licensing and archival metadata)"
     }
   ],
   "adaptations": {

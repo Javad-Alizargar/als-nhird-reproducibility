@@ -81,10 +81,10 @@ output: `RESULT: ALL CHECKS PASSED` with exit code 0.
 ## Regenerating figures and tables
 
 ```
-python3 code/economics_figure.py              # Figure 5 (power/cost/attrition/ascertainment)
-FIG_SUBS=ALS python3 code/telemetry_figure.py # Figure 6 (telemetry + simulated profiles)
-python3 code/figure_refinements.py            # Figures 1-4 (benchmarks/transcriptomics/twin/proposals)
-python3 code/de_pipeline.py                   # differential expression + metadata (regenerates data/tables/…)
+python3 code/figure_refinements.py        # Figures 1-4 (FIG_SUBS=ALS by default)
+python3 code/economics_figure.py          # Figure 5
+FIG_SUBS=ALS python3 code/telemetry_figure.py  # Figure 6
+python3 code/de_pipeline.py               # differential expression + metadata
 ```
 
 `code/digital_twin.py` re-runs the full 1,000-patient simulation and PINN
@@ -124,10 +124,10 @@ See `docs/data_dictionary.md`, `docs/provenance.md`,
 
 ## License
 
-First-party code and package documentation are provided by the author for
-reproducibility purposes; no formal open-source license has been applied yet
-(see `LICENSING.md`). Third-party data and official documents retain their own
-terms (see `THIRD_PARTY_NOTICES.md`).
+Original code and software documentation are licensed under the MIT License
+(see `LICENSE`, Copyright (c) 2026 Javad Alizargar). Third-party data and
+official documents retain their own terms (see `LICENSING.md` and
+`THIRD_PARTY_NOTICES.md`).
 
 ## Citation
 

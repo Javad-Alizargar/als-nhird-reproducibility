@@ -1,6 +1,6 @@
 {
   "title": "als-nhird-reproducibility: code and data for the ALS NHIRD proposal-planning and decision-support platform study",
-  "description": "Curated reproducibility package for the study of a simulation-assisted proposal-planning and decision-support platform for amyotrophic lateral sclerosis research in the Taiwan National Health Insurance Research Database. Contains the analysis code (differential expression, ODE/PINN digital twin, power/cost planning, proposal-generation evaluation), the platform rule engines, the archived result records (benchmarks, transcriptomic tables, 1,000-patient simulation, 60-run generation record, simulated human-factors profiles), and the offline verification harness. No manuscript text is included. Zenodo deposition is pending; no DOI is assigned yet.",
+  "description": "Curated reproducibility package for the study of a simulation-assisted proposal-planning and decision-support platform for amyotrophic lateral sclerosis research in the Taiwan National Health Insurance Research Database. Contains the analysis code (differential expression, ODE/PINN digital twin, power/cost planning, proposal-generation evaluation), the platform rule engines, the archived result records (benchmarks, transcriptomic tables, 1,000-patient simulation, 60-run generation record, simulated human-factors profiles), and the offline verification harness. Original code and software documentation are licensed MIT; third-party data and official documents retain their own terms (see LICENSING.md and THIRD_PARTY_NOTICES.md). No manuscript text is included.",
   "creators": [
     {
       "name": "Alizargar, Javad",
@@ -16,9 +16,8 @@
     "physics-informed neural networks",
     "reproducibility"
   ],
-  "license": "LicenseRef-proprietary",
-  "version": "1.0.0",
-  "publication_date": "2026-09-28",
+  "license": "mit",
+  "version": "1.4.0",
   "access_right": "open",
   "upload_type": "software",
   "related_identifiers": [
