@@ -129,7 +129,19 @@ Original code and software documentation are licensed under the MIT License
 official documents retain their own terms (see `LICENSING.md` and
 `THIRD_PARTY_NOTICES.md`).
 
-## Citation
+## Citing this package
 
-See `CITATION.cff`. Manuscript metadata is intentionally minimal: no
-publication venue, DOI, or acceptance status is claimed.
+Version 1.4.0 is archived on Zenodo. Cite the archived version with its
+version DOI:
+
+> Alizargar, J. (2026). *als-nhird-reproducibility: Code and data for the ALS
+> NHIRD proposal-planning and decision-support platform study* (Version 1.4.0)
+> [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23053558
+
+- Version DOI: https://doi.org/10.5281/zenodo.23053558
+- Concept DOI (all versions): https://doi.org/10.5281/zenodo.23053557
+- Record: https://zenodo.org/records/23053558
+- Release: https://github.com/Javad-Alizargar/als-nhird-reproducibility/releases/tag/v1.4.0
+
+Citation metadata is also provided in `CITATION.cff`. Manuscript metadata is
+intentionally minimal: no publication venue or acceptance status is claimed.
